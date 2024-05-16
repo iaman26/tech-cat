@@ -4,7 +4,7 @@
       <a href="/" class="header__logo">
         <img src="~/assets/img/logo.png" alt="" />
       </a>
-      <div class="mobile-btn">
+      <div class="mobile-btn" @click="onHeader()" :class="{ active: isHeader }">
         <svg
           class="default"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@
           />
         </svg>
       </div>
-      <div class="header__links">
+      <div class="header__links" :class="{ active: isHeader }">
         <a href="/" class="links__link">Home</a>
         <a href="#about" class="links__link">About</a>
         <a href="#tokenomics" class="links__link">Tokenomics</a>
@@ -75,3 +75,9 @@
     </div>
   </div>
 </template>
+<script setup>
+let isHeader = ref(false)
+function onHeader() {
+  isHeader.value = !isHeader.value
+}
+</script>

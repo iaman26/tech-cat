@@ -7,16 +7,15 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/google-fonts',
     '@nuxt/ui',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
   devtools: { enabled: true },
   colorMode: {
-    preference: 'light'
+    preference: 'light',
   },
   googleFonts: {
     families: {
       Poppins: [300, 400, 600, 900],
-
     },
   },
   css: ['~/assets/css/main.css'],
@@ -53,6 +52,35 @@ export default defineNuxtConfig({
         {
           hid: 'description',
           content: 'NFT',
+        },
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+        },
+      ],
+      script: [
+        {
+          src: 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js',
+          type: 'text/javascript',
+        },
+        { src: 'https://terminal.jup.ag/main-v2.js', type: 'text/javascript' },
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js',
+          integrity:
+            'sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==',
+          crossorigin: 'anonymous',
+          referrerpolicy: 'no-referrer',
+        },
+        {
+          src: 'https://code.jquery.com/jquery-3.7.0.min.js',
+          type: 'text/javascript',
+        },
+        {
+          src: 'https://embed.hel.io/assets/index-v1.js',
+          type: 'module',
+          crossorigin: 'anonymous',
         },
       ],
     },

@@ -174,7 +174,7 @@
         </svg>
       </div>
       <div class="faq__list">
-        <div class="list__block" data-id="1">
+        <div class="list__block" :class="{ active: faq1 }" @click="onFaq(1)">
           <div class="block__header">
             How do I Buy and Sell $STC?
             <svg
@@ -190,9 +190,14 @@
               />
             </svg>
           </div>
-          <div class="block__content">abc</div>
+          <div
+            class="block__content"
+            :style="{ display: faq1 ? 'block' : 'none' }"
+          >
+            abc
+          </div>
         </div>
-        <div class="list__block" data-id="2">
+        <div class="list__block" :class="{ active: faq2 }" @click="onFaq(2)">
           <div class="block__header">
             Will $STC list on more CEX's?
 
@@ -209,11 +214,14 @@
               />
             </svg>
           </div>
-          <div class="block__content">
+          <div
+            class="block__content"
+            :style="{ display: faq2 ? 'block' : 'none' }"
+          >
             Yes. $STC will be listed on most major worldwide exchanges.
           </div>
         </div>
-        <div class="list__block" data-id="3">
+        <div class="list__block" :class="{ active: faq3 }" @click="onFaq(3)">
           <div class="block__header">
             Is there a $MYRO whitepaper / roadmap?
             <svg
@@ -229,7 +237,10 @@
               />
             </svg>
           </div>
-          <div class="block__content">
+          <div
+            class="block__content"
+            :style="{ display: faq3 ? 'block' : 'none' }"
+          >
             Yes, you can view our whitepaper
             <a href="#" class="links__link">here</a>
           </div>
@@ -238,3 +249,23 @@
     </div>
   </section>
 </template>
+<script setup>
+let faq1 = ref(false)
+let faq2 = ref(false)
+let faq3 = ref(false)
+function onFaq(idx) {
+  switch (idx) {
+    case 1:
+      faq1.value = !faq1.value
+      break
+    case 2:
+      faq2.value = !faq2.value
+      break
+    case 3:
+      faq3.value = !faq3.value
+      break
+    default:
+      break
+  }
+}
+</script>

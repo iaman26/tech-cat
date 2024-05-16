@@ -15,7 +15,7 @@ a {
   background: #3e54c8;
   font-family: 'Grandstander', sans-serif;
   position: relative;
-  z-index: -999;
+  z-index: 10;
 }
 .container {
   max-width: 1276px;
@@ -102,6 +102,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   grid-gap: 64px;
+  height: fit-content;
 }
 .header .header__links .social__links {
   display: none;
@@ -120,6 +121,7 @@ a {
 }
 @media screen and (max-width: 500px) {
   .header .header__links {
+    height: 100vh;
     transform: translateY(-100%);
     transition: 0.3s all;
     border-radius: 40px;
