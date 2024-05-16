@@ -14,9 +14,7 @@ export default defineNuxtConfig({
     preference: 'light',
   },
   googleFonts: {
-    families: {
-      Poppins: [300, 400, 600, 900],
-    },
+    families: {},
   },
   css: ['~/assets/css/main.css'],
   ui: {
@@ -37,7 +35,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'NFT Market',
+      title: 'Social tech cat',
       meta: [
         {
           charset: 'utf-8',
