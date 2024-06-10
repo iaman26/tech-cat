@@ -27,6 +27,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@kolirt/vue-web3-auth": "^2.3.2",
     "@nuxt/ui": "^2.14.2",
     "@pinia/nuxt": "^0.5.1",
     "@use-wagmi/nuxt": "^1.1.8",
